@@ -113,11 +113,15 @@ const Dashboard: React.FC<DashboardProps> = ({ onRowClick }) => {
                       onClick={() =>
                         setClickedTablet({ card: stat.label, label: tablet.label })
                       }
-                      className={`flex-1 flex flex-col items-center justify-center py-3 px-1 rounded-2xl border cursor-pointer transition-all duration-200 ${
-                        isActive
-                          ? `${stat.color} bg-white shadow-sm`
-                          : 'border-transparent bg-[#F7F9FB]'
-                      }`}
+                     className={`flex-1 flex flex-col items-center justify-center py-3 px-2 
+rounded-xl border cursor-pointer 
+transition-all duration-300 ease-out
+${
+  isActive
+    ? `${stat.color} bg-white shadow-md scale-[1.02]`
+    : 'border-transparent bg-[#F7F9FB]'
+}
+hover:-translate-y-[2px] hover:shadow-md hover:bg-white`}
                     >
                       <p
                         className={`text-[9px] font-bold tracking-widest mb-1 ${
